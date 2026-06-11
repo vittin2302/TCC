@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informações do Livro</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='informacoes-livro.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <form method="POST">
+
+    <div class="campo">
+
+        <label>Título</label>
+
+        <input
+        type="text"
+        name="titulo"
+        placeholder="Digite o título">
+
+    </div>
+
+    <div class="campo">
+
+        <label>Sinopse</label>
+
+        <textarea
+        name="sinopse"
+        placeholder="Digite a sinopse"></textarea>
+
+    </div>
+
+    <button type="submit" class="botao">
+        Continuar
+    </button>
+
+</form>
+</div>
+
+</body>
+</html>

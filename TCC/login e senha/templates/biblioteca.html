@@ -7,7 +7,7 @@
 
 <title>YourPad - Biblioteca</title>
 
-<link rel="stylesheet" href="biblioteca.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='biblioteca.css') }}">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +22,9 @@
 </div>
 
 <nav class="menu">
-    <a href="pagina-principal.htm">Início</a>
-    <a href="biblioteca.htm">Biblioteca</a>
-    <a href="#">Comunidade</a>
+    <a href="{{ url_for('index') }}">Início</a>
+    <a href="biblioteca">Biblioteca</a>
+    <a href="comunidade">Comunidade</a>
 </nav>
 
 </header>
@@ -68,30 +68,21 @@ placeholder="Pesquisar livros...">
 
 <div class="grade-livros">
 
-    <div class="card-livro">
-        <img src="Além das cicatrizes do Passado.png">
-        <h3>Além das Cicatrizes do Passado</h3>
-        <p>Henry Dos Santos</p>
-    </div>
+    <div class="grade-livros">
+
+    {% for historia in historias %}
 
     <div class="card-livro">
-        <img src="A Última Chama livro.png">
-        <h3>A Última Chama</h3>
-        <p>Ana Costa</p>
+
+        <h3>{{ historia[1] }}</h3>
+
+        <p>{{ historia[2] }}</p>
+
     </div>
 
-    <div class="card-livro">
-        <img src="O Reino Perdido.png">
-        <h3>O Reino Perdido</h3>
-        <p>Vitor Domingues</p>
-    </div>
+    {% endfor %}
 
-    <div class="card-livro">
-        <img src="Noite Eterna.png">
-        <h3>Noite Eterna</h3>
-        <p>Igor Silva</p>
-    </div>
-
+</div>
 </div>
 
 </section>

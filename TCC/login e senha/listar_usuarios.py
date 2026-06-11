@@ -10,4 +10,8 @@ usuarios = cursor.fetchall()
 for usuario in usuarios:
     print(usuario)
 
+cursor.execute("SELECT * FROM historia")
+
+print(cursor.fetchall())
+
 conexao.close()

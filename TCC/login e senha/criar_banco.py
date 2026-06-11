@@ -11,6 +11,13 @@ CREATE TABLE IF NOT EXISTS usuario(
 )
 """)
 
+cursor.execute("""CREATE TABLE historia(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo TEXT NOT NULL,
+    sinopse TEXT
+)
+""")
+
 conexao.commit()
 conexao.close()
 

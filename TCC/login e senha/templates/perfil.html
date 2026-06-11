@@ -7,7 +7,7 @@
 
 <title>YourPad - Perfil</title>
 
-<link rel="stylesheet" href="perfil.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='perfil.css') }}">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +24,14 @@
 
     <nav class="menu">
 
-        <a href="pagina-principal.htm">Início</a>
+        <a href="index">Início</a>
 
-        <a href="#">Biblioteca</a>
+        <a href="biblioteca">Biblioteca</a>
 
-        <a href="#">Comunidade</a>
+        <a href="comunidade">Comunidade</a>
 
         <div class="menu-escrever">
-            <a href="#">Escrever ▾</a>
+            <a href="">Escrever ▾</a>
         </div>
 
     </nav>
@@ -46,7 +46,7 @@
 
         <div class="perfil-navbar">
 
-            <a href="perfil.htm">
+            <a href="perfil">
                 <img
                 src="foto de perfil henru.png"
                 alt="Perfil">
