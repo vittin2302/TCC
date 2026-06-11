@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+}
+
+.cabecalho{
+    background:white;
+    padding:20px 60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.logo h1{
+    color:#00BFFF;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#334155;
+    font-weight:500;
+}
+
+.banner-comunidade{
+    background:linear-gradient(
+        135deg,
+        #00BFFF,
+        #0099ff,
+        #0077ff
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:80px 20px;
+}
+
+.banner-comunidade h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.autores,
+.publicacoes,
+.ranking{
+    padding:60px;
+}
+
+.autores h2,
+.publicacoes h2,
+.ranking h2{
+    margin-bottom:30px;
+}
+
+.grade-autores{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card-autor{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card-autor img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.card-publicacao{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card-ranking{
+    background:white;
+    padding:20px;
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    display:flex;
+    justify-content:space-between;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+@media(max-width:900px){
+
+    .cabecalho{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .autores,
+    .publicacoes,
+    .ranking{
+        padding:30px;
+    }
+
+}
+
+.rodape{
+    margin-top:80px;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:40px;
+}

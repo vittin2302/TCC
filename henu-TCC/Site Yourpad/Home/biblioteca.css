@@ -1,0 +1,187 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+}
+
+.cabecalho{
+    background:white;
+    padding:20px 60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.logo h1{
+    color:#00BFFF;
+    font-size:2rem;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#334155;
+    font-weight:500;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#00BFFF;
+}
+
+.cabecalho-biblioteca{
+    text-align:center;
+    padding:70px 20px;
+
+    background:linear-gradient(
+        135deg,
+        #00BFFF,
+        #0099ff,
+        #0077ff
+    );
+
+    color:white;
+}
+
+.cabecalho-biblioteca h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.cabecalho-biblioteca p{
+    margin-bottom:30px;
+}
+
+.cabecalho-biblioteca input{
+    width:100%;
+    max-width:600px;
+
+    padding:16px;
+
+    border:none;
+    border-radius:15px;
+
+    font-size:15px;
+}
+
+.generos{
+    padding:60px;
+}
+
+.generos h2{
+    margin-bottom:30px;
+    color:#0f172a;
+}
+
+.lista-generos{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.card-genero{
+    background:white;
+    padding:14px 24px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.card-genero:hover{
+    background:#00BFFF;
+    color:white;
+    transform:translateY(-3px);
+}
+
+.livros{
+    padding:0 60px 60px;
+}
+
+.livros h2{
+    margin-bottom:30px;
+    color:#0f172a;
+}
+
+.grade-livros{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+}
+
+.card-livro{
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.card-livro:hover{
+    transform:translateY(-6px);
+}
+
+.card-livro img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.card-livro h3{
+    padding:15px 15px 5px;
+    color:#0f172a;
+}
+
+.card-livro p{
+    padding:0 15px 20px;
+    color:#64748b;
+}
+
+@media(max-width:900px){
+
+    .cabecalho{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .generos,
+    .livros{
+        padding:30px;
+    }
+}
+
+.rodape{
+    margin-top:80px;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:40px;
+}

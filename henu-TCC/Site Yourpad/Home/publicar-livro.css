@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        #00BFFF,
+        #0f172a
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    background:white;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    width:500px;
+}
+
+.card h1{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#64748b;
+    margin-bottom:30px;
+}
+
+.botao{
+    background:#00BFFF;
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 30px;
+
+    border-radius:12px;
+
+    display:inline-block;
+}
