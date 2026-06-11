@@ -53,6 +53,11 @@ body{
     cursor:pointer;
 }
 
+.perfil a{
+    text-decoration: none;
+    color: black;
+}
+
 .banner-principal{
     max-width:1300px;
     margin:auto;

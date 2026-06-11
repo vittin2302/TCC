@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 import sqlite3
 
 app = Flask(__name__)
+app.secret_key = "yourpad123"
 
 @app.route("/", methods=["GET", "POST"])
 def login():
@@ -26,6 +27,7 @@ def login():
 
         conexao.close()
         if resultado:
+            session["usuario"] = usuario
             return redirect("/index")
         else:
             return redirect("/")
@@ -115,8 +117,6 @@ def biblioteca():
         historias=historias
     )
     
-
-
 @app.route("/comunidade")
 def comunidade():
     return render_template("comunidade.html")
@@ -157,10 +157,15 @@ def publicar_historia():
 
 @app.route("/perfil")
 def perfil():
-    return render_template("perfil.html")
+    usuario = session.get("usuario")
+
+    return render_template("perfil.html", usuario=usuario)
 
 @app.route("/index")
 def index():
-    return render_template("index.html")
+
+    usuario = session.get("usuario")
+
+    return render_template("index.html", usuario=usuario)
 
 app.run(debug=True)

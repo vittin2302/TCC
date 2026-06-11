@@ -211,6 +211,11 @@ margin-top:20px;
     object-fit:cover;
 }
 
+.perfil a{
+    text-decoration: none;
+    color: black;
+}
+
 .rodape{
     margin-top:80px;
     background:#0f172a;
